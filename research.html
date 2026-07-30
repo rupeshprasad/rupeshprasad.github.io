@@ -1,0 +1,148 @@
+---
+layout: default
+nav: research
+permalink: /research/
+title: Research & Contributions | Rupesh Prasad
+description: Research interests, publications, and professional contributions of Rupesh Prasad — enterprise AI, IoT, UWB, and smart mobility.
+---
+
+    <header class="page-head">
+        <h1>Research &amp; Contributions</h1>
+        <p>Enterprise AI, connected systems, and smart mobility</p>
+    </header>
+
+    <main class="flush">
+
+        <section class="card">
+            <h2>Research &amp; Technical Interests</h2>
+            <p>
+                His research and professional interests focus on enterprise AI, intelligent and
+                connected systems, secure cloud-native architectures, IoT, and emerging
+                technologies for smart mobility. His current research explores the use of
+                Ultra-Wideband (UWB) communication and IoT-enabled architectures to improve
+                vehicle safety and situational awareness. This work examines secure proximity
+                detection, real-time vehicle-to-vehicle information exchange, edge intelligence,
+                and cloud integration to help vehicles identify surrounding risks and respond
+                more effectively in complex driving environments.
+            </p>
+        </section>
+
+        <section class="card">
+            <h2>Publications &amp; Awards</h2>
+            <h3>Publications</h3>
+            <ul class="dots">
+                <li><a href="https://ieeexplore.ieee.org/abstract/document/11572960" target="_blank" rel="noopener">Cloud-Based AI-Enabled Data Analytics for Electronic Waste Reuse and Refurbishment</a></li>
+                <li><a href="https://medium.com/@rupeshkprasad/when-single-sign-on-fails-for-spas-how-browser-privacy-broke-seamless-login-28168bccafec" target="_blank" rel="noopener">Browser Privacy and Authentication Challenges</a></li>
+            </ul>
+            <h3 style="margin-top:18px;">Honors &amp; Awards</h3>
+            <ul class="dots">
+                <li>Best DevOps Cloud Project &mdash; Issued by <a href="https://devopsdtawards.com/" target="_blank" rel="noopener">DevOps Industry Awards, UK</a> &middot; 2020</li>
+                <li>Multiple "On the Spot" recognition awards</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>Speaking</h2>
+            <ul class="timeline">
+                <li>
+                    <h3><a class="modal-trigger" href="{{ '/assets/ic3aid-2026-keynote-speaker.jpg' | relative_url }}" data-modal>Keynote Speaker &mdash; IC3AID 2026</a></h3>
+                    <p class="tl-meta"><a class="tl-company" href="https://avit.ac.in/" target="_blank" rel="noopener">Vinayaka Mission's Research Foundation / AVIT</a> &middot; 31 July 2026</p>
+                    <p>
+                        Keynote at the International Conference on Cognitive Computing, AI &amp;
+                        Data Intelligence.
+                    </p>
+                </li>
+                <li>
+                    <h3>Guest Speaker &amp; Judge</h3>
+                    <p class="tl-meta"><a class="tl-company" href="https://www.uri.edu/" target="_blank" rel="noopener">University of Rhode Island</a> &middot; Jan 2026 – Feb 2026</p>
+                    <p>
+                        Invited as a speaker and judge for Hack@URI 2026, delivering sessions to
+                        students and faculty to bridge the gap between academia and industry. The
+                        session focused on <em>Cloud-Native Digital Transformation</em>.
+                    </p>
+                </li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>Judging &amp; Peer Review</h2>
+            <p>
+                Rupesh actively serves the technical community as a conference paper reviewer,
+                awards judge, and evaluation committee member, assessing work across AI, data,
+                cybersecurity, and privacy.
+            </p>
+            <ul class="dots">
+                <li><strong>Reviewer</strong> &mdash; IEEE International Conference on AI &amp; Data Analytics (ICAD 2026), Boston</li>
+                <li><strong>Reviewer</strong> &mdash; 2nd IEEE International Conference on Big Data &amp; Machine Learning</li>
+                <li><strong>Committee Member</strong> &mdash; IEEE Security and Privacy Artifact Evaluation Committee</li>
+                <li><strong>Judge</strong> &mdash; Globee Awards for Cybersecurity &middot; 2023</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>Academic &amp; Professional Contributions</h2>
+            <p>
+                Rupesh is an IEEE Senior Member and a <a href="https://raptors.dev" target="_blank" rel="noopener">Raptors.dev</a> Fellow. He has contributed to
+                the research and professional community through IEEE conference paper reviewing,
+                research publications, technical speaking, mentoring, and professional evaluation
+                activities. His fellowship recognition reflects sustained technical leadership,
+                knowledge sharing, and contribution to the broader developer and technology
+                community.
+            </p>
+            <p>
+                He brings a distinctive applied-industry perspective to research and technical
+                evaluation. Drawing on extensive experience designing secure, scalable,
+                interoperable, and high-performance systems, he is able to assess emerging work
+                not only for technical novelty, but also for architectural feasibility, security,
+                real-world deployability, and potential industry impact across AI, IoT, connected
+                systems, communications, cybersecurity, and intelligent transportation.
+            </p>
+        </section>
+
+    </main>
+
+    <!-- Image modal -->
+    <div class="modal" id="imgModal" role="dialog" aria-modal="true" aria-label="Image preview">
+        <div class="modal-content">
+            <button class="modal-close" type="button" aria-label="Close">&times;</button>
+            <img id="modalImg" src="" alt="">
+            <p class="modal-caption" id="modalCaption"></p>
+        </div>
+    </div>
+
+    <script>
+        (function () {
+            var modal = document.getElementById('imgModal');
+            var modalImg = document.getElementById('modalImg');
+            var caption = document.getElementById('modalCaption');
+            var closeBtn = modal.querySelector('.modal-close');
+
+            function openModal(src, label) {
+                modalImg.src = src;
+                modalImg.alt = label || '';
+                caption.textContent = label || '';
+                modal.classList.add('open');
+                document.body.style.overflow = 'hidden';
+            }
+            function closeModal() {
+                modal.classList.remove('open');
+                document.body.style.overflow = '';
+                modalImg.src = '';
+            }
+
+            document.querySelectorAll('[data-modal]').forEach(function (el) {
+                el.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    openModal(el.getAttribute('href'), el.textContent.trim());
+                });
+            });
+
+            closeBtn.addEventListener('click', closeModal);
+            modal.addEventListener('click', function (e) {
+                if (e.target === modal) closeModal();
+            });
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
+            });
+        })();
+    </script>

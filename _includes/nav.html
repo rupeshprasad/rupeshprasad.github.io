@@ -1,0 +1,13 @@
+{% assign nav_id = page.nav | default: page.title %}
+<nav class="nav">
+    <div class="nav-inner">
+        <a class="nav-brand" href="{{ '/' | relative_url }}">Rupesh Prasad</a>
+        <ul class="nav-links">
+            <li><a href="{{ '/' | relative_url }}"{% if nav_id == 'home' %} class="active"{% endif %}>Home</a></li>
+            <li><a href="{{ '/experience/' | relative_url }}"{% if nav_id == 'experience' %} class="active"{% endif %}>Experience</a></li>
+            <li><a href="{{ '/research/' | relative_url }}"{% if nav_id == 'research' %} class="active"{% endif %}>Research &amp; Contributions</a></li>
+            <li><a href="{{ '/skills/' | relative_url }}"{% if nav_id == 'skills' %} class="active"{% endif %}>Skills</a></li>
+            <li><a href="{{ '/contact/' | relative_url }}"{% if nav_id == 'contact' %} class="active"{% endif %}>Contact</a></li>
+        </ul>
+    </div>
+</nav>

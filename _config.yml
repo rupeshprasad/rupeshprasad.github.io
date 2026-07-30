@@ -1,0 +1,12 @@
+title: Rupesh Prasad
+description: >-
+  Technical Architect and Senior Manager at Analog Devices. IEEE Senior Member
+  and Raptors.dev Fellow with 18+ years in cloud, cybersecurity, AI, and IoT.
+url: "https://rupeshprasad.com"
+author: Rupesh Prasad
+
+# Keep source files (README, etc.) out of the built site
+exclude:
+  - README.md
+  - Rupesh_Prasad_Profile.pdf
+  - Profile.pdf

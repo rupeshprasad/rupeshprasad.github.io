@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include head.html %}
+<body>
+
+    {% include nav.html %}
+
+    {{ content }}
+
+    {% include footer.html %}
+
+    <script>
+        (function () {
+            var y = document.getElementById('year');
+            if (y) y.textContent = new Date().getFullYear();
+        })();
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,384 @@
+/* ============================================================
+   Rupesh Prasad — personal site
+   Shared stylesheet
+   ============================================================ */
+
+:root {
+    --navy:      #14263f;
+    --navy-soft: #223a5e;
+    --accent:    #2f6f8f;
+    --accent-2:  #3f8fb0;
+    --ink:       #1c2733;
+    --muted:     #5a6b7b;
+    --line:      #e2e8ef;
+    --bg:        #f6f8fb;
+    --card:      #ffffff;
+    --maxw:      880px;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+
+body {
+    margin: 0;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.65;
+    font-size: 17px;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { color: var(--navy); text-decoration: underline; }
+
+/* ---------- Navigation bar ---------- */
+.nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(20, 38, 63, 0.97);
+    backdrop-filter: saturate(140%) blur(6px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.nav-inner {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 60px;
+    flex-wrap: wrap;
+    gap: 4px 16px;
+}
+
+.nav-brand {
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 600;
+    font-size: 1.15rem;
+    color: #fff;
+    letter-spacing: 0.4px;
+    white-space: nowrap;
+}
+.nav-brand:hover { color: #fff; text-decoration: none; }
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    display: inline-block;
+    padding: 8px 13px;
+    color: #cdd8e4;
+    font-size: 0.92rem;
+    font-weight: 500;
+    border-radius: 7px;
+    transition: background 0.15s, color 0.15s;
+}
+.nav-links a:hover { color: #fff; background: rgba(255, 255, 255, 0.10); text-decoration: none; }
+.nav-links a.active { color: #fff; background: var(--accent); }
+
+/* ---------- Hero / page header ---------- */
+.hero {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-soft) 100%);
+    color: #fff;
+    padding: 60px 24px 54px;
+    text-align: center;
+}
+.hero .inner { max-width: var(--maxw); margin: 0 auto; }
+
+.hero h1 {
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 600;
+    font-size: clamp(2.1rem, 6vw, 3rem);
+    letter-spacing: 0.5px;
+    margin: 0 0 10px;
+}
+
+.hero .role {
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    font-weight: 500;
+    color: #dfe9f2;
+    margin: 0 0 6px;
+}
+
+.hero .location {
+    font-size: 0.95rem;
+    color: #aebfd0;
+    margin: 0 0 18px;
+}
+
+.badges {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 4px;
+}
+
+.badge {
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    color: #eaf2f8;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    padding: 5px 13px;
+    border-radius: 999px;
+}
+a.badge { transition: background 0.15s, border-color 0.15s; }
+a.badge:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.22);
+    border-color: rgba(255, 255, 255, 0.4);
+    text-decoration: none;
+}
+
+/* Compact header for interior pages */
+.page-head {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-soft) 100%);
+    color: #fff;
+    padding: 42px 24px 40px;
+    text-align: center;
+}
+.page-head h1 {
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 600;
+    font-size: clamp(1.7rem, 5vw, 2.3rem);
+    margin: 0 0 6px;
+}
+.page-head p { margin: 0; color: #c6d3e2; font-size: 1rem; }
+
+/* ---------- Layout ---------- */
+main {
+    max-width: var(--maxw);
+    margin: -28px auto 0;
+    padding: 0 20px 40px;
+}
+main.flush { margin-top: 34px; }
+
+section.card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 28px 32px;
+    margin-bottom: 22px;
+    box-shadow: 0 6px 24px rgba(20, 38, 63, 0.06);
+}
+
+h2 {
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 600;
+    font-size: 1.35rem;
+    color: var(--navy);
+    margin: 0 0 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--line);
+}
+
+h3 { font-size: 1.08rem; color: var(--navy); margin: 0 0 4px; }
+
+p { margin: 0 0 14px; }
+p:last-child { margin-bottom: 0; }
+
+/* ---------- Bullet lists (two-column) ---------- */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 28px;
+}
+.grid ul, ul.dots { margin: 0; padding: 0; list-style: none; }
+
+.grid li, ul.dots li {
+    padding: 7px 0 7px 22px;
+    position: relative;
+}
+.grid li::before, ul.dots li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 15px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--accent-2);
+}
+
+/* ---------- Tag chips ---------- */
+.chips { display: flex; flex-wrap: wrap; gap: 9px; }
+.chip {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--navy-soft);
+    background: #eaf1f6;
+    border: 1px solid #d5e2ea;
+    padding: 6px 13px;
+    border-radius: 999px;
+}
+
+/* ---------- Timeline (experience) ---------- */
+.timeline { position: relative; margin: 0; padding: 0 0 0 26px; list-style: none; }
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 6px;
+    bottom: 6px;
+    width: 2px;
+    background: var(--line);
+}
+.timeline > li { position: relative; padding: 0 0 26px; }
+.timeline > li:last-child { padding-bottom: 0; }
+.timeline > li::before {
+    content: "";
+    position: absolute;
+    left: -26px;
+    top: 6px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: 3px solid var(--bg);
+    box-shadow: 0 0 0 2px var(--accent);
+}
+.tl-meta { color: var(--muted); font-size: 0.9rem; margin: 2px 0 8px; }
+.tl-company { font-weight: 600; color: var(--accent); }
+.timeline ul { margin: 8px 0 0; padding-left: 18px; }
+.timeline ul li { margin-bottom: 4px; }
+
+/* ---------- Contact ---------- */
+.contact { display: flex; flex-wrap: wrap; gap: 12px 22px; align-items: center; }
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-weight: 500;
+    background: var(--navy);
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 8px;
+}
+.btn:hover { background: var(--accent); color: #fff; text-decoration: none; }
+.btn.ghost { background: transparent; color: var(--accent); border: 1px solid var(--accent); }
+.btn.ghost:hover { background: var(--accent); color: #fff; }
+
+/* ---------- CTA row on home ---------- */
+.cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 6px; }
+
+/* ---------- Social icon ---------- */
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    color: #fff;
+    background: #0a66c2;
+    transition: background 0.15s, transform 0.15s;
+    vertical-align: middle;
+}
+.social-icon:hover { background: var(--navy); transform: translateY(-1px); text-decoration: none; }
+.social-icon svg { width: 18px; height: 18px; fill: currentColor; display: block; }
+
+/* LinkedIn icon inside a light-button context (contact page) */
+.btn .social-svg { width: 18px; height: 18px; fill: currentColor; }
+
+/* ---------- Image modal ---------- */
+.modal-trigger {
+    color: var(--accent);
+    cursor: pointer;
+    text-decoration: none;
+}
+.modal-trigger:hover { color: var(--navy); text-decoration: underline; }
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    background: rgba(15, 25, 40, 0.82);
+    padding: 28px 20px;
+    /* centering */
+    align-items: center;
+    justify-content: center;
+    animation: modal-fade 0.15s ease-out;
+}
+.modal.open { display: flex; }
+
+@keyframes modal-fade { from { opacity: 0; } to { opacity: 1; } }
+
+.modal-content {
+    position: relative;
+    max-width: 1100px;
+    width: 100%;
+    max-height: 92vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.modal-content img {
+    max-width: 100%;
+    max-height: 84vh;
+    width: auto;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+.modal-caption {
+    color: #dfe9f2;
+    font-size: 0.9rem;
+    margin-top: 12px;
+    text-align: center;
+}
+.modal-close {
+    position: absolute;
+    top: -14px;
+    right: -6px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background: #fff;
+    color: var(--navy);
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+    transition: transform 0.15s;
+}
+.modal-close:hover { transform: scale(1.08); }
+
+@media (max-width: 620px) {
+    .modal-close { top: -10px; right: 0; }
+}
+
+/* ---------- Footer ---------- */
+footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.85rem;
+    padding: 24px 20px 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+footer a { color: var(--muted); }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 620px) {
+    .hero { padding: 46px 20px 44px; }
+    section.card { padding: 22px 20px; }
+    .grid { grid-template-columns: 1fr; gap: 0; }
+    .nav-inner { min-height: 54px; }
+    .nav-links a { padding: 7px 10px; font-size: 0.88rem; }
+}
