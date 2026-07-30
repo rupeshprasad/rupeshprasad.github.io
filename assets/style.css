@@ -85,6 +85,33 @@ a:hover { color: var(--navy); text-decoration: underline; }
 .nav-links a:hover { color: #fff; background: rgba(255, 255, 255, 0.10); text-decoration: none; }
 .nav-links a.active { color: #fff; background: var(--accent); }
 
+/* Hamburger button — hidden on desktop, shown on mobile */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 42px;
+    height: 38px;
+    padding: 0 9px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 8px;
+    cursor: pointer;
+}
+.nav-toggle span {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: #fff;
+    border-radius: 2px;
+    transition: transform 0.25s ease, opacity 0.2s ease;
+}
+/* Animate to an "X" when open */
+.nav.open .nav-toggle span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav.open .nav-toggle span:nth-child(2) { opacity: 0; }
+.nav.open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
 /* ---------- Hero / page header ---------- */
 .hero {
     background: linear-gradient(135deg, var(--navy) 0%, var(--navy-soft) 100%);
@@ -375,10 +402,47 @@ footer {
 footer a { color: var(--muted); }
 
 /* ---------- Responsive ---------- */
-@media (max-width: 620px) {
+@media (max-width: 720px) {
     .hero { padding: 46px 20px 44px; }
     section.card { padding: 22px 20px; }
     .grid { grid-template-columns: 1fr; gap: 0; }
-    .nav-inner { min-height: 54px; }
-    .nav-links a { padding: 7px 10px; font-size: 0.88rem; }
+
+    .nav-inner {
+        min-height: 54px;
+        flex-wrap: nowrap;
+    }
+
+    /* Show the hamburger */
+    .nav-toggle { display: flex; }
+
+    /* Collapse the links into a dropdown panel */
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        gap: 0;
+        background: rgba(20, 38, 63, 0.99);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+        padding: 6px 0;
+        /* hidden by default */
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        pointer-events: none;
+        transition: max-height 0.28s ease, opacity 0.2s ease;
+    }
+    .nav.open .nav-links {
+        max-height: 340px;
+        opacity: 1;
+        pointer-events: auto;
+    }
+    .nav-links li { width: 100%; }
+    .nav-links a {
+        display: block;
+        padding: 13px 22px;
+        border-radius: 0;
+        font-size: 1rem;
+    }
 }

@@ -8,9 +8,11 @@ author: Rupesh Prasad
 # Keep source files (README, etc.) out of the built site
 exclude:
   - README.md
+  - LOCAL_SETUP.md
   - Rupesh_Prasad_Profile.pdf
   - Profile.pdf
   - Gemfile
   - Gemfile.lock
   - vendor
   - .bundle
+  - serve.bat
