@@ -6,3 +6,6 @@ _site/
 # Bundler
 .bundle/
 vendor/
+
+# Local development tools and logs
+.tools/

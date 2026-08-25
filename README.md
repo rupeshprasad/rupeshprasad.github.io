@@ -1,6 +1,6 @@
 # rupeshprasad.com
 
-Personal website for **Rupesh Prasad** — Technical Architect & Senior Manager at Analog Devices, IEEE Senior Member, and Raptors.dev Fellow.
+Personal website for **Rupesh Prasad** — Technical Architect & Senior Manager at Analog Devices, IEEE Senior Member, Raptors.dev Fellow, and [SCRS Fellow](https://www.scrs.in/scrs-fellow/2243).
 
 Multi-page [Jekyll](https://jekyllrb.com/) site hosted on GitHub Pages at [rupeshprasad.com](https://rupeshprasad.com). GitHub Pages builds it automatically on push — no local build required.
 
